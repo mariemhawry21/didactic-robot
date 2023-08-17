@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --Purple: hsl(259, 100%, 65%);
+    --Lightred: hsl(0, 100%, 67%);
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: hsl(0, 0%, 86%);
+}
+.age-calc {
+    position: relative;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    width: 800px;
+    height: 550px;
+    border-radius:15px 15px 150px 15px ;
+}
+header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    padding-top: 20px;
+}
+.day-box , .month-box , .year-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+.day-box p , .month-box p , .year-box p {
+    display: none;
+    margin-top: 5px;
+    color: var(--Lightred);
+    font-weight: 100;
+}
+label {
+    margin-bottom: 10px;
+}
+.error {
+    color: var(--Lightred);
+}
+input {
+    width: 150px;
+    height: 50px;
+    padding: 15px;
+    border: 1px solid none;
+    border-radius: 5px;
+}
+input:focus {
+    outline: 1px solid var(--Purple);
+}
+header::after {
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width:700px;
+    height: 1px;
+    background-color: hsl(0, 0%, 86%);
+    margin-bottom: -50px;
+}
+.btn {
+    position: absolute;
+    background-color: var(--Purple);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 40px;
+    top: 150px;
+}
+.btn img:hover{
+    transform: rotate(360deg);
+}
+.btn img {
+width: 40px;
+padding: 5px;
+transition: transform 0.3s;
+}
+.show-age {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    padding-left: 20px;
+}
+.show-age p {
+    font-size: 3.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.show-age span {
+    color: var(--Purple);
+    font-size: 4rem;
+    margin-right: 5px;
+}
